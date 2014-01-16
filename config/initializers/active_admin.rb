@@ -241,5 +241,6 @@ config.namespace :admin do |admin|
   # You can enable or disable them for all resources here.
   #
   # config.filters = true
-
+  config.view_factory.footer = MyFooter
 end
+
