@@ -2,7 +2,14 @@ ActiveAdmin.register Product, :namespace => "my" do
 
   menu false
   #menu :label => "My Posts"
-  #scope_to 
+  #scope_to :current_user  #access: current_user.posts.
+  
+  controller do
+    def resource
+      Product.first
+    end
+  end
+
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
