@@ -1,6 +1,7 @@
-ActiveAdmin.register Product do
+ActiveAdmin.register Product, :namespace => "my" do
 
-  menu :label => "My Products"
+  menu false
+  #menu :label => "My Posts"
   #scope_to :current_user  #access: current_user.posts.
   
   # controller do
